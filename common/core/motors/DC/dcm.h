@@ -4,7 +4,6 @@
 #include "qenc.h"
 #include "st_gpio.h"
 #include "st_pwm.h"
-#include "timeout.h"
 
 typedef struct DCMotor DCMotor;
 

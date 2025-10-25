@@ -1,5 +1,6 @@
 /**
  * @brief this file sets up the PWM drivers for use with various timers
+ * @author Jaden Guidangen
  */
 
 #pragma once

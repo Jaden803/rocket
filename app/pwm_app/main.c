@@ -1,6 +1,5 @@
 
 #include "FreeRTOS.h"
-#include "main_loop.h"
 #include "task.h"
 
 #include "pwm_app_bsp.h"
@@ -20,6 +19,11 @@ void pwm_test(void)
     pwm.setDuty(&pwm, x);
 
     x = (x < 100) ? x + 1 : 0;
+
+    //delay
+    for (int i = 0; i < 1000000; i++)
+    {
+    }
 }
 
 int main(void)
@@ -29,7 +33,10 @@ int main(void)
 
     StPwmEnable(&pwm, true);
 
-    create_main_loop(pwm_test, 10);
+    while (1)
+    {
+        pwm_test();
+    }
 
     /* Start the scheduler to start the tasks executing. */
     vTaskStartScheduler();

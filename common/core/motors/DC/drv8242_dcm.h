@@ -6,7 +6,6 @@
 #include "gpio.h"
 #include "pwm.h"
 #include "qenc.h"
-#include "timeout.h"
 
 #include <stdbool.h>
 
